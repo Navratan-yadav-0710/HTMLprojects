@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navratan | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 8%;
+      z-index: 1000;
+      border-bottom: 1px solid #1e293b;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 0.5px;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      color: #cbd5e1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 1rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero span {
+      color: #38bdf8;
+    }
+    .hero .tagline {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .hero p {
+      max-width: 650px;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: #38bdf8;
+      color: #0f172a;
+    }
+    .btn-primary:hover {
+      background-color: #0284c7;
+    }
+    .btn-outline {
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 8%;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 3px;
+      background: #38bdf8;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* About & Education */
+    .about-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+    .about-box p {
+      color: #cbd5e1;
+      margin-bottom: 1.2rem;
+    }
+    .edu-timeline {
+      border-left: 2px solid #38bdf8;
+      padding-left: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .edu-item {
+      margin-bottom: 1.2rem;
+    }
+    .edu-item h4 {
+      color: #f8fafc;
+      font-size: 1.05rem;
+    }
+    .edu-item span {
+      color: #38bdf8;
+      font-size: 0.85rem;
+    }
+    .edu-item p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1.2rem;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .skill-card {
+      background: #1e293b;
+      padding: 1.2rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      font-weight: 600;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      transition: border-color 0.3s;
+    }
+    .skill-card:hover {
+      border-color: #38bdf8;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 1.8rem;
+      border: 1px solid #334155;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+    }
+    .project-card h3 {
+      color: #f8fafc;
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
+    .project-card p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      flex-grow: 1;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .project-tags span {
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    /* Contact */
+    .contact-container {
+      max-width: 550px;
+      margin: 0 auto;
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 0.95rem;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #38bdf8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e293b;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Navratan.</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Hi, I'm <span>Navratan</span></h1>
+    <div class="tagline">Computer Science Student & Developer</div>
+    <p>
+      Passionate about core computer science fundamentals, efficient software systems, 
+      and clean code. Continuously building projects and expanding skills in software development.
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-box">
+      <p>
+        I am a dedicated student with a strong foundation in algorithmic problem-solving and computer science coursework. 
+        I enjoy exploring system-level programming, data structures, and practical software solutions.
+      </p>
+      <div class="edu-timeline">
+        <div class="edu-item">
+          <h4>B.Tech in Computer Science & Engineering</h4>
+          <span>2024 - Present</span>
+          <p>Focusing on Core Data Structures, Algorithms, Computer Networks, and System Architecture.</p>
+        </div>
+        <div class="edu-item">
+          <h4>Senior Secondary Examination (Class XII)</h4>
+          <span>Cleared with Mathematics & Science Foundation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Data Structures</div>
+      <div class="skill-card">Algorithms</div>
+      <div class="skill-card">SQL / Databases</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">VS Code</div>
+      <div class="skill-card">Linux Basics</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div>
+          <h3>Algorithm Visualizer</h3>
+          <div class="project-tags">
+            <span>C++</span>
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+          </div>
+          <p>
+            An interactive tool implementing sorting, searching, and graph pathfinding algorithms with real-time complexity analysis.
+          </p>
+        </div>
+        <a href="https://github.com" target="_blank">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <h3>System Resource Monitor</h3>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>OS APIs</span>
+            <span>Analytics</span>
+          </div>
+          <p>
+            A lightweight utility tracking CPU, RAM, and network bandwidth usage with automated log export and threshold notifications.
+          </p>
+        </div>
+        <a href="https://github.com" target="_blank">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <h3>Academic Record System</h3>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>SQLite</span>
+            <span>CLI</span>
+          </div>
+          <p>
+            A database-backed student management interface handling record persistence, query indexing, and grade performance tracking.
+          </p>
+        </div>
+        <a href="https://github.com" target="_blank">View on GitHub &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-container">
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Navratan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent successfully.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
