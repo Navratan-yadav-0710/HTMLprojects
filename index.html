@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+        </div>
+
+        <nav>
+            <a class="active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+
+            <a>
+                <i class="fa-solid fa-book-open"></i>
+                Your Library
+            </a>
+        </nav>
+
+        <div class="library">
+            <a>
+                <i class="fa-solid fa-plus"></i>
+                Create Playlist
+            </a>
+
+            <a>
+                <i class="fa-solid fa-heart"></i>
+                Liked Songs
+            </a>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a>Legal</a>
+            <a>Privacy</a>
+            <a>Cookies</a>
+            <a>About Ads</a>
+
+            <button class="language">
+                <i class="fa-solid fa-globe"></i>
+                English
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="arrows">
+                <button>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="account">
+                <span>Sign up</span>
+                <button class="login">Log in</button>
+            </div>
+
+        </header>
+
+
+        <!-- ================= HOME PAGE ================= -->
+        <section class="home-page">
+
+            <h2>Focus</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="cover peaceful">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <h3>Peaceful Piano</h3>
+                    <p>Relax and enjoy peaceful piano music.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover deep">
+                        <span>Deep<br>Focus</span>
+                    </div>
+                    <h3>Deep Focus</h3>
+                    <p>Keep calm and focus with ambient music.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover study">
+                        <span>Instrumental<br>Study</span>
+                    </div>
+                    <h3>Instrumental Study</h3>
+                    <p>Focus with softly-mixed instrumental music.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover focus-flow">
+                        <span>FOCUS<br>FLOW</span>
+                    </div>
+                    <h3>Focus Flow</h3>
+                    <p>Uplifting instrumental music.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover beats">
+                        <span>BEATS<br>to think to</span>
+                    </div>
+                    <h3>Beats to think to</h3>
+                    <p>Fresh beats for deep thinking.</p>
+                </div>
+
+            </div>
+
+
+            <h2 class="section-title">Spotify Playlists</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="cover rap">
+                        <span>Today's<br>Top Hits</span>
+                    </div>
+                    <h3>Today's Top Hits</h3>
+                    <p>The biggest songs right now.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover rapcaviar">
+                        <span>RapCaviar</span>
+                    </div>
+                    <h3>RapCaviar</h3>
+                    <p>New music from the world of rap.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover allout">
+                        <span>All Out<br>2010s</span>
+                    </div>
+                    <h3>All Out 2010s</h3>
+                    <p>The biggest songs of the decade.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover rock">
+                        <span>Rock<br>Classics</span>
+                    </div>
+                    <h3>Rock Classics</h3>
+                    <p>Rock legends and timeless hits.</p>
+                </div>
+
+                <div class="card">
+                    <div class="cover chill">
+                        <span>Chill<br>Hits</span>
+                    </div>
+                    <h3>Chill Hits</h3>
+                    <p>Chill out with these relaxing songs.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLAYLIST PAGE ================= -->
+        <section class="playlist-page">
+
+            <div class="playlist-header">
+
+                <div class="playlist-image">
+                    <span>Deep<br>Focus</span>
+                </div>
+
+                <div class="playlist-info">
+                    <small>Playlist</small>
+                    <h1>Deep Focus</h1>
+
+                    <p>
+                        Keep calm and focus with ambient and post-rock music.
+                    </p>
+
+                    <div class="playlist-meta">
+                        <i class="fa-brands fa-spotify"></i>
+                        Spotify • 2,490,806 likes • 25 songs
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+            <div class="controls">
+
+                <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button class="control-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <button class="control-btn">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+
+            <!-- SONG LIST -->
+            <div class="songs">
+
+                <div class="song">
+                    <span class="number">1</span>
+
+                    <div class="song-img img1"></div>
+
+                    <div class="song-name">
+                        <b>So Far So Good</b>
+                        <span>Odesza</span>
+                    </div>
+
+                    <span class="album">Summer</span>
+                    <span class="date">1 week ago</span>
+                    <span class="duration">2:31</span>
+                </div>
+
+
+                <div class="song">
+                    <span class="number">2</span>
+
+                    <div class="song-img img2"></div>
+
+                    <div class="song-name">
+                        <b>Aquity</b>
+                        <span>Odesza</span>
+                    </div>
+
+                    <span class="album">Summer</span>
+                    <span class="date">1 week ago</span>
+                    <span class="duration">2:38</span>
+                </div>
+
+
+                <div class="song">
+                    <span class="number">3</span>
+
+                    <div class="song-img img3"></div>
+
+                    <div class="song-name">
+                        <b>Solitude</b>
+                        <span>Jasper</span>
+                    </div>
+
+                    <span class="album">Ambient</span>
+                    <span class="date">1 week ago</span>
+                    <span class="duration">2:08</span>
+                </div>
+
+
+                <div class="song">
+                    <span class="number">4</span>
+
+                    <div class="song-img img4"></div>
+
+                    <div class="song-name">
+                        <b>efflorescence</b>
+                        <span>Helios</span>
+                    </div>
+
+                    <span class="album">Ambient</span>
+                    <span class="date">1 week ago</span>
+                    <span class="duration">2:22</span>
+                </div>
+
+
+                <div class="song">
+                    <span class="number">5</span>
+
+                    <div class="song-img img5"></div>
+
+                    <div class="song-name">
+                        <b>Gather My Thoughts</b>
+                        <span>Chill Out</span>
+                    </div>
+
+                    <span class="album">Deep Focus</span>
+                    <span class="date">1 week ago</span>
+                    <span class="duration">3:00</span>
+                </div>
+
+
+                <div class="song">
+                    <span class="number">6</span>
+
+                    <div class="song-img img6"></div>
+
+                    <div class="song-name">
+                        <b>Fresh Paint</b>
+                        <span>Tycho</span>
+                    </div>
+
+                    <span class="album">Dive</span>
+                    <span class="date">1 week ago</span>
+                    <span class="duration">4:20</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
