@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table.html</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f6f9;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Border styling */
+        th, td {
+            border: 1px solid #b4c6e7;
+            padding: 10px 16px;
+            font-size: 15px;
+            color: #2c3e50;
+        }
+
+        /* Main Header ("Seminar") */
+        tr:first-child th {
+            background-color: #2b579a;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sub-headers ("Day", "Schedule", "Topic", "Begin", "End") */
+        th {
+            background-color: #41719c;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Distinct column background for the Days */
+        td[rowspan="2"]:first-child,
+        td[rowspan="3"]:first-child,
+        tr:last-child td:first-child {
+            background-color: #d9e1f2;
+            font-weight: 600;
+            color: #1f3864;
+        }
+
+        /* Alternating row color */
+        tr:nth-child(even) td {
+            background-color: #f9fbfd;
+        }
+
+        /* Hover effect */
+        tr:hover td {
+            background-color: #ebf1f5;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th rowspan="3">Day</th>
+            <th colspan="3">Seminar</th>
+        </tr>
+        <tr>
+            <th colspan="2">Schedule</th>
+            <th rowspan="2">Topic</th>
+        </tr>
+        <tr>
+            <th>Begin</th>
+            <th>End</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2">8:00 a.m.</td>
+            <td rowspan="2">5:00 p.m.</td>
+            <td>Introduction to XML</td>
+        </tr>
+        <tr>
+            <td>Validity: DTD and Relax NG</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td>8:00 a.m.</td>
+            <td>11:00 a.m.</td>
+            <td rowspan="2">XPath</td>
+        </tr>
+        <tr>
+            <td>11:00 a.m.</td>
+            <td>2:00 p.m.</td>
+        </tr>
+        <tr>
+            <td>2:00 p.m.</td>
+            <td>5:00 p.m.</td>
+            <td>XSL Transformations</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>8:00 a.m.</td>
+            <td>12:00 p.m.</td>
+            <td>XSL Formatting Objects</td>
+        </tr>
+    </table>
+
+</body>
+</html>
